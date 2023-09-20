@@ -57,27 +57,13 @@ a {
     color: var(--main_items);
 }
 
-.swiper {
-    /* display: none; */
-    background:var(--main-background);
-}
-
-.swiper-pagination-bullet-active {
-    background: var(--swiper-pagination-color, #B5B6BC);
-}
-
-.swiper-slide {
-    flex-shrink: 2;
-    margin-right: 15px;
-    position: relative;
-}
 
 li {
     list-style: none;
 }
 
 .container {
-    width: 1121px;
+    max-width: 1121px;
     padding: 0px 1px 14px 0px;
     justify-content: center;
     align-items: center;
@@ -85,7 +71,7 @@ li {
 }
 
 .header {
-    width: 1120px;
+    max-width: 1120px;
     height: 56px;
     background: linear-gradient(170deg, #F8F8F8 0%, #FFF 98.61%);
     padding: 15px 0 15px 30px;
@@ -145,31 +131,101 @@ footer p {
     align-self: center;
 }
 
+.read {
+    display: none;
+}
+
+.read:nth-child(2) {
+    display: block;
+}
+
 .read a img {
     margin-right: 5px;
 }
 
+#returnButton {
+    display: none;
+}
+
+#hiddenBlocks {
+    display: flex;
+}
+
     /* ---- Swiper ---- */
+
 .swiper {
+    display: none;
     height: 100px;
     width: 300px;
 }
 
-@media (max-width:320px) {
+.swiper-pagination-bullet-active {
+    background: var(--swiper-pagination-color, #B5B6BC);
+}
+
+.swiper-slide {
+    flex-shrink: 0;
+    position: relative;
+}
+
+.card {
+    display: flex;
+}
+
+
+
+
+@media (min-width:320px) and (max-width: 768px) {
+
+    .container {
+        /* background: var(--second-text); */
+        max-width: 768px;
+        height: 180px;
+    }
+
     .header {
-        width: 320px;
+        max-width: 768px;
         height: 80px;
     }
     
-    .container {
-        width: 320px;
-        height: 80px;   
+    .swiper-slide-next {
+        margin-left: -40px;
     }
 
     .swiper {
+        position: relative;
+        margin-top: 10px;
         display: flex;
+        height: 100px;
+        width: 330px;
     }
 
+    .swiper::after {
+        position: absolute;
+        content: '';
+        top: 0;
+        right: 0;
+        width: 24px;
+        height: 81px;
+        background: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.00) 100%);
+        z-index: 3;
+    }
+
+    .swiper-backface-hidden .swiper-slide  {
+        position: relative;
+    }
+
+    .swiper-slide-next  {
+        position: relative;
+    }
+
+    .services {
+        display: none;
+    }
+
+    footer {
+        display: none;
+    }
 
 
 }
