@@ -33,15 +33,12 @@ const hiddenBlocks = document.getElementById("hiddenBlocks");
 initialButton.addEventListener("click", function () {
     initialButton.style.display = "none";
     hiddenBlocks.style.display = "none";
-
-
     returnButton.style.display = "flex";
 });
 
 returnButton.addEventListener("click", function () {
 
     returnButton.style.display = "none";
-
     initialButton.style.display = "flex";
     hiddenBlocks.style.display = "flex";
 });
