@@ -64,17 +64,15 @@ li {
 
 .container {
     max-width: 1121px;
-    padding: 0px 1px 14px 0px;
     justify-content: center;
     align-items: center;
     background:var(--main-background);
+    padding: 15px 0 15px 30px;
 }
 
 .header {
-    max-width: 1120px;
     height: 56px;
     background: linear-gradient(170deg, #F8F8F8 0%, #FFF 98.61%);
-    padding: 15px 0 15px 30px;
 }
 
 .header h2 {
@@ -93,9 +91,7 @@ li {
     justify-content: flex-start;
     align-items: center;
     flex-wrap: wrap;
-    padding: 25px 0 25px 25px;
     gap: 30px;
-
 }
 
 .card {
@@ -111,7 +107,7 @@ li {
 }
 
 footer {
-    padding: 45px 0 25px 25px;
+    margin-top: 30px;
     display: flex;
     align-items: center;
 }
@@ -126,6 +122,7 @@ footer p {
     letter-spacing: -0.2px;
 }
 
+    /* ---- switch read ---- */
 .read a {
     display: flex;
     align-self: center;
@@ -174,7 +171,6 @@ footer p {
 
 
 
-
 @media (min-width:320px) and (max-width: 768px) {
 
     .container {
@@ -206,7 +202,7 @@ footer p {
         top: 0;
         right: 0;
         width: 24px;
-        height: 81px;
+        height: 71px;
         background: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.00) 100%);
         z-index: 3;
     }
@@ -229,4 +225,3 @@ footer p {
 
 
 }
-

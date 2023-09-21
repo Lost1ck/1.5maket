@@ -11,34 +11,48 @@ const swiper = new Swiper('.swiper', {
   });
 
 
-  // document.querySelector('hide').onclick=function(){
-
-
-  //   let hide = document.querySelectorAll('hide').style.display;
-
-  //   if(hide.style.display === 'flex') {
-  //     style.display = 'none'
-  //   } else {
-  //     style.display = 'flex'
-  //   }
-  // };
-
-
-
 const initialButton = document.getElementById("initialButton");
 const returnButton = document.getElementById("returnButton");
-const hiddenBlocks = document.getElementById("hiddenBlocks");
 
+const hiddenBlocks = document.querySelectorAll(".hiddenCart");
 
-initialButton.addEventListener("click", function () {
-    initialButton.style.display = "none";
-    hiddenBlocks.style.display = "none";
-    returnButton.style.display = "flex";
+initialButton.addEventListener('click', function() {
+
+  initialButton.style.display = 'none'
+  returnButton.style.display = 'flex'
+
+  if (window.innerWidth <= 1020) {
+    for (let i = 0; i < 11; i++) {
+      if(i == 3 || i >= 7) {
+        document.querySelectorAll('.card')[i].style.display = 'none';
+      }
+    }
+  } 
+  else if (window.innerWidth > 1020) {
+    for (let i = 8; i <= 11; i++) {
+      document.querySelectorAll('.card')[i].style.display = 'none';
+    }
+  };
+  
 });
 
-returnButton.addEventListener("click", function () {
 
-    returnButton.style.display = "none";
-    initialButton.style.display = "flex";
-    hiddenBlocks.style.display = "flex";
+returnButton.addEventListener('click', function() {
+
+  initialButton.style.display = 'flex'
+  returnButton.style.display = 'none'
+
+  if (window.innerWidth <= 1020) {
+    for (let i = 0; i < 11; i++) {
+      if(i == 3 || i >= 7) {
+        document.querySelectorAll('.card')[i].style.display = 'flex';
+      }
+    }
+  } 
+  else if (window.innerWidth > 1020) {
+    for (let i = 8; i <= 11; i++) {
+      document.querySelectorAll('.card')[i].style.display = 'flex';
+    }
+  };
+  
 });
