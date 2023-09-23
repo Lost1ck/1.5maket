@@ -86,7 +86,7 @@ li {
 }
 
 .services {
-    padding: 15px 0 15px 30px;
+    padding: 15px 0 15px 15px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -107,7 +107,7 @@ li {
 }
 
 footer {
-    padding: 15px 0 15px 30px;
+    padding: 15px 0 15px 15px;
     margin-top: 30px;
     display: flex;
     align-items: center;
