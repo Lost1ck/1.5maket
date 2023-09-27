@@ -96,9 +96,6 @@ li {
     height: 110px;
 }
 
-.swiper-wrapper {
-}
-
 .swiper::after {
     position: absolute;
     content: '';
@@ -163,6 +160,13 @@ footer {
     background: #FFF;
 }
 
+.display--flex {
+    display: flex;
+}
+
+.display--none {
+    display: none;
+}
 
 @media (min-width:768px) {
     
@@ -177,10 +181,6 @@ footer {
     }
 
     /* ---- swiper ---- */
-
-    .services {
-        display: flex;
-    }
 
     .services {
         padding: 15px 0 15px 15px;
@@ -216,7 +216,7 @@ footer {
         display: flex;
         align-items: center;
     }
-    
+
     footer p {
         color: var(--main_items);
         font-family: "TT Lakes-regular",sans-serif;
@@ -227,42 +227,55 @@ footer {
         letter-spacing: -0.2px;
     }
     
-        /* ---- switch footer__footer__button ---- */
-    .footer__button a {
+        /* ---- switch footer-footer-button ---- */
+    .footer-button a {
         display: flex;
         align-self: center;
     }
     
-    .footer__button {
-        display: none;
-    }
-    
-    .footer__button:nth-child(2) {
-        display: block;
-    }
-    
-    .footer__button a img {
-        margin-right: 5px;
-    }
-    
-    #returnButton {
-        display: none;
-    }
-
-    .initialButton {
+    .footer-button a {
         display: flex;
     }
-
-    .returnButton {
-        display: none;
-    }
-
-    .returnButton {
-        display: block;
+    
+    .footer-button a img {
+        margin-right: 5px;
     }
 
     .hiddenCart {
         display: flex;
     }
 
+    .display--flex {
+        display: flex;
+    }
+    
+    .display--none {
+        display: none;
+    }
+
+}
+
+
+@media (min-width: 768px) and (max-width: 1120px) {
+
+    .services-card:nth-child(n+8) {
+        display: flex;
+    }
+
+    .services.visible > .services-card:nth-child(n+8),
+    .services.visible .services-card:nth-child(4) {
+        display: none;
+    }
+    
+}
+
+@media (min-width:1120px) {
+
+    .services-card:nth-child(n+9) {
+        display: flex;
+    }
+
+    .services.visible .services-card:nth-child(n+9) {
+        display: none;
+    }
 }
